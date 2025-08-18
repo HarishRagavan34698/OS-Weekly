@@ -1,0 +1,18 @@
+/* Existing styles */
+
+.box {
+	background-color: #f5f6f7;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	padding: 32px;
+	min-height: 80vh;
+	min-width: 0;
+	max-width: 1200px;
+	width: 95vw;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin: 32px 0 32px 32px;
+}
+
+/* Additional styles can follow */
