@@ -1,12 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import ProfileCard from './components/ProfileCard.jsx';
 import './styles/App.css'
 import './styles/Arrow.css';
 import Navbar from './components/Navbar.jsx';
-import TabArrow from './components/TabArrow.jsx';
+
 import RM_Evaluation from './components/RM_Evaluation.jsx';
-import TaskBox from './components/TaskBox.jsx';
 import EmployeeDetails from './components/EmployeeDetails.jsx';
 
 function App() {
@@ -27,11 +25,9 @@ function App() {
         navItems={navItems}
         onMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
       />
-      <div className="breadcrumb-sidebar">
-        <div className="breadcrumb-back">←</div>
-        My Workspace &gt; OS Weekly Activities
-      </div>
-      <TabArrow /> {/* <-- Add this line to show the arrow below the breadcrumb */}
+
+      <ProfileCard />
+
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '32px 0 0 32px' }}>
         {/* Clipboard SVG icon */}
         <svg width="40" height="40" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg">
