@@ -3,7 +3,7 @@ import ProfileCard from './components/ProfileCard.jsx';
 import './styles/App.css'
 import './styles/Arrow.css';
 import Navbar from './components/Navbar.jsx';
-
+import AdditionalControls from "./components/AdditionalControls"; 
 import RM_Evaluation from './components/RM_Evaluation.jsx';
 import EmployeeDetails from './components/EmployeeDetails.jsx';
 
@@ -18,6 +18,12 @@ function App() {
     { label: "Settings", path: "/settings" }
   ];
 
+  const Image = ({ src, alt, width, height, style }) => {
+    return (
+        <img src={src} alt={alt} width={width} height={height} style={style} />
+    );
+};
+
   return (
     <>
       <Navbar 
@@ -28,7 +34,7 @@ function App() {
 
       <ProfileCard />
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '32px 0 0 32px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '0px 0px 0px 32px' }}>
         {/* Clipboard SVG icon */}
         <svg width="40" height="40" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="8" y="12" width="32" height="36" rx="4" fill="#5EDC1F"/>
@@ -58,6 +64,7 @@ function App() {
             { declarationDate: "14 Jun 2025 - 18 Jun 2025", type: "Hybrid", days: [{day:14,type:'Work From Home'},{day:15,type:'Work From Office'},{day:16,type:'Leave'},{day:17,type:'Work From Home'},{day:18,type:'Work From Office'}], description: "Priya's work details for the week. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham." }
           ]}
         />
+        <AdditionalControls />
       </RM_Evaluation>
     </>
   )
