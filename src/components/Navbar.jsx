@@ -7,8 +7,7 @@ import BookmarkIcon from "../assets/svg/bookmark.svg";
 import AppsLogoIcon from "../assets/svg/appslogo.svg";
 import LogoIcon from "../assets/svg/logo.svg";
 import BellIcon from "../assets/svg/notificationbell.svg";
-import TabArrow from "./TabArrow";
-import MyWorkspaceTab from "./MyWorkspaceTab";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 const Navbar = () => {
   return (
@@ -19,14 +18,14 @@ const Navbar = () => {
         </span>
         <span className="navbar-title">Nest</span>
         <div className="navbar-tabs-group">
-          <MyWorkspaceTab active={true} />
+          <button className="navbar-tab active">My Workspace</button>
           <button className="navbar-tab">Manager Hub</button>
         </div>
       </div>
       <div className="navbar-center"></div>
       <div className="navbar-right">
         <div className="navbar-search-wrapper">
-          <span className="navbar-search-icon">🔍</span>
+          <SearchOutlinedIcon className="navbar-search-icon" />
           <input type="text" placeholder="search" className="navbar-search" />
         </div>
         <span className="navbar-icon">
@@ -56,7 +55,6 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-    
   );
 };
 
