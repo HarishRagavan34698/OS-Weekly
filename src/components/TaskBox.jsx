@@ -1,48 +1,80 @@
-import React from 'react';
-import '../styles/RM_Evaluation.css';
+import React from "react";
+import "../styles/TaskBox.css";
 
 const dayTypeColors = {
-  'Work From Office': { bg: '#C8F7C5', color: '#388E3C' },
-  'Work From Home': { bg: '#D6E6FF', color: '#1976D2' },
-  'Leave': { bg: '#FFE6E6', color: '#D32F2F' },
-  'Not Declared': { bg: '#FFF7CC', color: '#FBC02D' },
-  'Holiday': { bg: '#B3E5FC', color: '#0288D1' },
+  "Work From Office": { bg: "#C8F7C5", color: "#000000" },
+  "Work From Home": { bg: "#D6E6FF", color: "#000000" },
+  Leave: { bg: "#FFE6E6", color: "#000000" },
+  "Not Declared": { bg: "#FFF7CC", color: "#000000" },
+  Holiday: { bg: "#B3E5FC", color: "#000000" },
 };
 
 const TaskBox = ({ declarationDate, type, days, description }) => (
-  <div className="task-box" style={{
-    background: '#fff',
-    borderRadius: '8px',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-    padding: '20px',
-    marginBottom: '16px',
-    display: 'flex',
-    gap: '24px',
-    alignItems: 'flex-start'
-  }}>
-    <div style={{ minWidth: '120px', textAlign: 'left' }}>
-      <div style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: '4px' }}>{declarationDate}</div>
-      <div style={{ color: '#2196f3', fontWeight: '500', marginBottom: '8px' }}>{type}</div>
-      <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+  <div className="task-box">
+    {/* Left side: date + type + days */}
+    <div className="task-left">
+      <div className="task-date">
+        {/* Calendar icon */}
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 2V5M16 2V5M3 10H21M5 4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4Z"
+            stroke="#38AEE0"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        {declarationDate}
+        {/* Info icon */}
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="12" cy="12" r="10" stroke="#38AEE0" strokeWidth="2" />
+          <path
+            d="M12 16V12M12 8H12.01"
+            stroke="#38AEE0"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+
+      <div className="task-type">{type}</div>
+
+      <div className="task-days">
         {days.map((item, idx) => {
-          const { bg, color } = dayTypeColors[item.type] || dayTypeColors['Not Declared'];
+          const { bg, color } =
+            dayTypeColors[item.type] || dayTypeColors["Not Declared"];
           return (
-            <span key={idx} style={{
-              background: bg,
-              color: color,
-              borderRadius: '50%',
-              padding: '6px 12px',
-              fontWeight: 'bold',
-              fontSize: '1rem',
-              border: '1px solid #eee'
-            }}>{item.day}</span>
+            <span
+              key={idx}
+              className="task-day"
+              style={{ background: bg, color }}
+            >
+              {item.day}
+            </span>
           );
         })}
       </div>
     </div>
-    <div style={{ flex: 1 }}>
-      <div style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: '6px' }}>High quality rich text editor for the web</div>
-      <div style={{ color: '#444', fontSize: '0.98rem' }}>{description}</div>
+
+    {/* Right side: description */}
+    <div className="task-right">
+      <div className="task-title">
+        High quality rich text editor for the web
+      </div>
+      <div className="task-description">{description}</div>
     </div>
   </div>
 );

@@ -4,15 +4,87 @@
 	background-color: #f5f6f7;
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-	padding: 32px;
-	min-height: 80vh;
-	min-width: 0;
-	max-width: 1200px;
-	width: 95vw;
+	padding: 24px;
+	min-height: 60vh;
+	width: 100%;
+	max-width: 100%;
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
-	margin: 32px 0 32px 32px;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* Top-right controls */
+.top-right-controls {
+	position: absolute;
+	top: 16px;
+	right: 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 12px;
+}
+
+/* Note indicator */
+.note-indicator {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+}
+
+.note-icon {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.note-dot {
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	width: 8px;
+	height: 8px;
+	background-color: #8b5cf6;
+	border-radius: 50%;
+}
+
+.note-text {
+	font-size: 0.75rem;
+	color: #6b7280;
+	font-weight: 500;
+}
+
+/* Action buttons */
+.action-buttons {
+	display: flex;
+	gap: 8px;
+}
+
+.action-btn {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 12px;
+	border: 1px solid #3b82f6;
+	border-radius: 6px;
+	background: transparent;
+	color: #3b82f6;
+	font-size: 0.75rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+	background-color: #3b82f6;
+	color: white;
+}
+
+.action-btn svg {
+	stroke: currentColor;
 }
 
 /* Additional styles can follow */

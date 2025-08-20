@@ -1,138 +1,98 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
-.workspace-button {
-  position: relative;
-}
-
-/* Style for the arrow below My Workspace */
-.workspace-button::after {
-  content: '';
-  position: absolute;
-  bottom: -10px; /* Adjust this value to position the arrow lower */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid #646cff; /* Color of the arrow, match your theme */
-}
-
-.box {
-  background-color: #f5f6f7;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  padding: 32px;
-  min-height: 400px;
-  min-width: 700px;
-  max-width: 1000px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
-.user-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  border-bottom: 1px solid #ccc;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.profile-pic {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #4CAF50; /* green border to mimic online status */
-}
-
-.user-details {
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
 }
 
-.name-id {
+/* Main Content */
+.main-content {
+  padding: 1rem 2rem;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  flex: 1;
+  background-color: #ffffff;
+}
+
+/* Required Info Section */
+.required-info-section {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem 0;
+  background-color: #ffffff;
+}
+
+.required-info-text {
   font-weight: bold;
+  font-size: 1rem;
   color: #333;
 }
 
-.gen-id {
-  font-weight: normal;
-  color: #777;
-}
-
-.email {
-  color: #555;
-  font-size: 0.9rem;
-}
-
-.user-meta {
+/* Content Wrapper */
+.content-wrapper {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
 }
 
-.user-meta .label {
-  font-weight: bold;
-  color: #333;
-  display: block;
+/* RM_Evaluation specific adjustments */
+.content-wrapper > :first-child {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f5f6f7;
 }
 
-.user-meta .value {
-  color: #555;
-  font-size: 0.9rem;
+/* AdditionalControls positioning */
+.content-wrapper > :last-child {
+  margin: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f5f6f7;
+}
+
+/* Remove any extra spacing */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure no extra margins on body and html */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 0.5rem 1rem;
+  }
+  
+  .required-info-section {
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .content-wrapper {
+    gap: 0.5rem;
+  }
 }

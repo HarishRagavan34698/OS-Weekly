@@ -1,44 +1,48 @@
 import React from "react";
-import "../styles/AdditionalControls.css"; // create this CSS file
+import "../styles/AdditionalControls.css";
 
 const AdditionalControls = () => {
   return (
     <div className="additional-controls">
-      {/* Comment Section */}
-      <div className="form-group">
-        <label htmlFor="comment">Comment (Max 500 Chars)</label>
-        <textarea
-          id="comment"
-          maxLength="500"
-          placeholder="xxx-xxx-xx-xxx-x"
-        />
-      </div>
-
-      {/* Action Buttons */}
-      <div className="button-group">
+      {/* Top Section - Save as Draft button positioned top right */}
+      <div className="top-section">
         <button type="button" className="btn btn-draft">
           Save as Draft
         </button>
-        <button type="submit" className="btn btn-submit">
-          Submit
-        </button>
+      </div>
+
+      {/* Comment Section */}
+      <div className="comment-section">
+        <label htmlFor="comment">Comment (Max 500 Chars)</label>
+        <div className="textarea-container">
+          <textarea
+            id="comment"
+            maxLength="500"
+            placeholder="XXX-XXX-XX-XXX-X"
+          />
+        </div>
+        <div className="submit-button-container">
+          <button type="submit" className="btn btn-submit">
+            Submit
+          </button>
+        </div>
       </div>
 
       {/* Transfer Workflow */}
       <div className="workflow">
+        <div className="workflow-content">
+          <svg
+            className="workflow-icon"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          <span>Transfer Workflow</span>
+        </div>
         <svg
-          className="icon"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5C13.3807 9.5 14.5 10.6193 14.5 12Z" />
-          <path d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" />
-          <path d="M17.41 10.59L16 9.17L12 13.17L8 9.17L6.59 10.59L12 16L17.41 10.59Z" />
-        </svg>
-        <span>Transfer Workflow</span>
-        <svg
-          className="icon"
+          className="chevron-icon"
           viewBox="0 0 24 24"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"

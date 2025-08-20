@@ -30,6 +30,16 @@
   align-items: center;
   justify-content: center;
   margin-right: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.navbar-icon:hover {
+  color: #3b82f6;
+  background-color: #f3f4f6;
+  transform: scale(1.1);
 }
 
 .navbar-title {
@@ -37,6 +47,15 @@
   font-size: 17px;
   margin-right: 18px;
   color: #222;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.navbar-title:hover {
+  color: #3b82f6;
+  background-color: #f3f4f6;
 }
 
 .navbar-tab {
@@ -48,14 +67,25 @@
   cursor: pointer;
   color: #7b7b7b;
   margin-right: 2px;
-  transition: background 0.2s, color 0.2s;
+  transition: all 0.2s ease;
   font-weight: 500;
+}
+
+.navbar-tab:hover {
+  background: #e6f7fd;
+  color: #2ec4f1;
+  transform: translateY(-1px);
 }
 
 .navbar-tab.active {
   background: #2ec4f1;
   color: #fff;
   font-weight: 600;
+}
+
+.navbar-tab.active:hover {
+  background: #1ba7d4;
+  transform: translateY(-1px);
 }
 
 .navbar-center {
@@ -73,6 +103,11 @@
   display: flex;
   align-items: center;
   margin-right: 16px;
+  transition: all 0.2s ease;
+}
+
+.navbar-search-wrapper:hover {
+  transform: scale(1.02);
 }
 
 .navbar-search-icon {
@@ -98,11 +133,16 @@
   color: #222;
   box-shadow: none;
   font-family: inherit;
+  transition: all 0.2s ease;
 }
 
 .navbar-search:focus {
   border-bottom: 2px solid #2196f3;
   background: transparent;
+}
+
+.navbar-search:hover {
+  border-bottom: 2px solid #3b82f6;
 }
 
 .navbar-search::placeholder {
@@ -157,6 +197,15 @@
   align-items: center;
   margin-left: 10px;
   gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.navbar-user:hover {
+  background-color: #f3f4f6;
+  transform: scale(1.02);
 }
 
 .navbar-avatar {
@@ -165,6 +214,11 @@
   border-radius: 50%;
   object-fit: cover;
   border: 1.5px solid #e5e7eb;
+  transition: border-color 0.2s ease;
+}
+
+.navbar-user:hover .navbar-avatar {
+  border-color: #3b82f6;
 }
 
 .navbar-user-info {
@@ -178,18 +232,26 @@
   font-weight: 600;
   font-size: 15px;
   color: #222;
+  transition: color 0.2s ease;
+}
+
+.navbar-user:hover .navbar-user-name {
+  color: #3b82f6;
 }
 
 .navbar-user-title {
   font-size: 12px;
   color: #888;
   font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.navbar-user:hover .navbar-user-title {
+  color: #6b7280;
 }
 
 .nest-icon {
   margin-right: 16px;
-  display: flex;
-  align-items: center;
 }
 
 .navbar-tabs-group {
@@ -215,7 +277,7 @@
   line-height: 60px;
   border-radius: 999px;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: all 0.2s ease;
   outline: none;
   display: flex;
   align-items: center;
