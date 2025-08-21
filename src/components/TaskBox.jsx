@@ -7,6 +7,7 @@ const dayTypeColors = {
   Leave: { bg: "#FFE6E6", color: "#000000" },
   "Not Declared": { bg: "#FFF7CC", color: "#000000" },
   Holiday: { bg: "#B3E5FC", color: "#000000" },
+  Hybrid: { bg: "#000000", color: "#ffffff" },
 };
 
 const TaskBox = ({ declarationDate, type, days, description }) => (
@@ -54,13 +55,16 @@ const TaskBox = ({ declarationDate, type, days, description }) => (
 
       <div className="task-days">
         {days.map((item, idx) => {
-          const { bg, color } =
-            dayTypeColors[item.type] || dayTypeColors["Not Declared"];
+          const { bg } = dayTypeColors[item.type] || dayTypeColors["Not Declared"];
+          const isHybrid = item.type === "Hybrid";
           return (
             <span
               key={idx}
-              className="task-day"
-              style={{ background: bg, color }}
+              className={`task-day ${ isHybrid ? "hybrid-day" : ""}`}
+              style={{ 
+                background: bg,
+                fontWeight: isHybrid ? "bold" : "normal",
+               }}
             >
               {item.day}
             </span>

@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/AdditionalControls.css";
 
+
+
 const AdditionalControls = () => {
   return (
     <div className="additional-controls">
@@ -32,13 +34,13 @@ const AdditionalControls = () => {
       <div className="workflow">
         <div className="workflow-content">
           <svg
-            className="workflow-icon"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-          </svg>
+    className="workflow-icon"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.59L16.59 13 18 14.41l-5 5-5-5L7.41 13 11 16.59V8h2z"/>
+  </svg>
           <span>Transfer Workflow</span>
         </div>
         <svg
@@ -53,7 +55,7 @@ const AdditionalControls = () => {
 
       {/* Policies Link */}
       <div className="policies">
-        <a href="#">View Policies</a>
+        
       </div>
     </div>
   );

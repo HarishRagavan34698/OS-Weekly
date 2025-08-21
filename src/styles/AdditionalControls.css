@@ -115,6 +115,8 @@
 .workflow-icon {
   width: 24px;
   height: 24px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
   color: #8b5cf6;
 }
 
@@ -151,4 +153,11 @@
 
 .policies a:hover {
   color: #9ca3af;
+}
+
+.policy-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
 }
