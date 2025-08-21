@@ -83,6 +83,15 @@
 	font-weight: 500;
 	cursor: pointer;
 	transition: all 0.2s ease;
+	border: none;           /* removes any default border */
+	outline: none;
+}
+
+action-btn:focus,
+.action-btn:hover {
+  border: none;
+  outline: none;
+  background: transparent; /* optional: prevents background flash */
 }
 
 .note-popup-inline {
