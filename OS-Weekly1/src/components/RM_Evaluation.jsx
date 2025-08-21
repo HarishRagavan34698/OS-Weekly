@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/RM_Evaluation.css';
 
-const RM_Evaluation = ({ children }) => (
+const RM_Evaluation = ({ children }) =>(
+
   <div className="box" style={{ position: 'relative' }}>
     {/* Top-left labels */}
     <div style={{ position: 'absolute', top: 16, left: 24, fontWeight: 'bold', fontSize: '1rem', background: 'transparent', padding: '2px 8px', borderRadius: '4px', color: '#333' }}>
@@ -14,7 +15,7 @@ const RM_Evaluation = ({ children }) => (
     {/* Top-right controls */}
     <div className="top-right-controls">
       {/* Note icon */}
-      <div className="note-indicator">
+      <div className="note-indicator" onClick={() => setShowNote(true)}>
         <div className="note-icon">
           <svg width="29" height="34" viewBox="0 0 29 34" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.5 20L7.5 19V15H4V13L5.5 10.35V8H4V6H13V8H11.5V10.35L13 13V15H9.5V19L8.5 20ZM6.3 13H10.7L9.5 10.9V8H7.5V10.9L6.3 13ZM15.1 4H4C4 3.45 4.19583 2.97917 4.5875 2.5875C4.97917 2.19583 5.45 2 6 2H15.1C15.0667 2.16667 15.0417 2.32917 15.025 2.4875C15.0083 2.64583 15 2.81667 15 3C15 3.18333 15.0083 3.35417 15.025 3.5125C15.0417 3.67083 15.0667 3.83333 15.1 4ZM22 18H14V16H22V7.575C22.4 7.39167 22.7667 7.16667 23.1 6.9C23.4333 6.63333 23.7333 6.33333 24 6V16C24 16.55 23.8042 17.0208 23.4125 17.4125C23.0208 17.8042 22.55 18 22 18Z" fill="#5856D6"/>
@@ -25,6 +26,7 @@ const RM_Evaluation = ({ children }) => (
           <div className="note-dot"></div>
         </div>
       </div>
+      
 
       {/* Import/Export buttons */}
       <div className="action-buttons">
