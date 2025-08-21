@@ -47,6 +47,7 @@ const RM_Evaluation = ({ children }) => {
 
       {showNote && (
         <div className="note-popup-inline">
+          <button className="btn-close" onClick={() => setShowNote(false)}>&times;</button>
             <h3>Note: </h3>
             <p>1. You can submit this workflow only on month end till then, please save activities in draft mode. (Submit button will be visible on month end.)</p>
             <p>For RM with multiple reportees:</p>
@@ -55,7 +56,6 @@ const RM_Evaluation = ({ children }) => {
               <li>2.Only fill in <strong>Task Description</strong> and <strong>Leave Utilized</strong> (Columns ‘J’ & ‘K’).(Ensure no other fields are edited.)</li>
               <li>3.Once details are populated, upload the Excel file.</li>
             </ul>
-            <button className="btn-close" onClick={() => setShowNote(false)}>Close</button>
         </div>
       )}
 
