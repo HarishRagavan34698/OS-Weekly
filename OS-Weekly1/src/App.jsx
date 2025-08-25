@@ -48,7 +48,7 @@ function App() {
 
         <div className="required-info-section">
           {/* Clipboard SVG icon */}
-          <img src="C:\SAMSUNG_PRISM\OS-Weekly\OS-Weekly1\src\assets\svg\clipboard.svg"/>
+          <img src={clipboardIcon} alt="Clipboard Icon" />
 
           <span className="required-info-text">Required Information</span>
         </div>
