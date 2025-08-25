@@ -1,3 +1,4 @@
+/* Additional Controls Styles */
 .additional-controls {
   display: flex;
   flex-direction: column;
@@ -21,7 +22,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .comment-section label {
@@ -89,6 +90,7 @@
 .btn-submit {
   background-color: #3b82f6;
   color: #ffffff;
+  margin-left: auto; /* This ensures the button aligns to the right */
 }
 
 .btn-submit:hover {
@@ -101,19 +103,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 0.75rem 1.25rem; /* slightly wider padding */
+  padding: 0.75rem 1.25rem;
   background-color: transparent;
   border-radius: 0;
-  width: 100%; /* ✅ makes it span full container */
-  margin-bottom: 0; /* ✅ removes space below */
-}
-
-.additional-controls {
-  gap: 1.5rem; /* consider reducing this if it’s causing vertical spacing */
-}
-
-.comment-section {
-  margin-bottom: 1rem; /* reduce from 2rem if needed */
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .workflow-content {
@@ -129,8 +123,8 @@
 }
 
 .workflow-icon, .chevron-icon {
-  background: none;   /* ensures no extra fill layer */
-  fill: currentColor; /* inherits text color */
+  background: none;
+  fill: currentColor;
 }
 
 .chevron-icon:hover {
@@ -139,10 +133,9 @@
 
 /* Policies Link */
 .policies {
-  margin-top: 2rem; /* or whatever spacing feels right */
+  margin-top: 2rem;
   padding-top: 1rem;
 }
-
 
 .policies a {
   color: #6b7280;
@@ -161,4 +154,38 @@
   height: 20px;
   margin-right: 0.5rem;
   vertical-align: middle;
+}
+
+/* Form Actions - Right aligned submit button */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .additional-controls {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .workflow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .submit-button-container {
+    justify-content: center;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .form-actions {
+    justify-content: center;
+  }
 }
