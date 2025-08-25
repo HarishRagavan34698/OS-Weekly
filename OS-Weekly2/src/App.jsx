@@ -49,13 +49,8 @@ function App() {
 
         <div className="required-info-section">
           {/* Clipboard SVG icon */}
-          <svg width="40" height="40" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="8" y="12" width="32" height="36" rx="4" fill="#5EDC1F"/>
-  <rect x="16" y="8" width="16" height="6" rx="2" fill="#5EDC1F"/>
-  <rect x="16" y="22" width="16" height="4" rx="2" fill="#fff"/>
-  <rect x="16" y="30" width="16" height="4" rx="2" fill="#fff"/>
-  <rect x="16" y="38" width="10" height="4" rx="2" fill="#fff"/>
-</svg>
+          <img src="C:\SAMSUNG_PRISM\OS-Weekly\OS-Weekly1\src\assets\svg\clipboard.svg"/>
+          
 
           <span className="required-info-text">Required Information</span>
         </div>
