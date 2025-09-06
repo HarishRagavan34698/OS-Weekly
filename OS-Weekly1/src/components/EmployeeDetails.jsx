@@ -1,6 +1,7 @@
 import React from "react";
 import TaskBox from "./TaskBox.jsx";
 import "../styles/EmployeeDetails.css";
+import ScrollableTasks from "./ScrollableTasks.jsx";
 
 const EmployeeDetails = ({ name, number, tasks }) => (
   <div className="employee-card">
@@ -59,9 +60,11 @@ const EmployeeDetails = ({ name, number, tasks }) => (
     </div>
 
     {/* Tasks */}
-    {tasks.map((task, idx) => (
-      <TaskBox key={idx} {...task} />
-    ))}
+    <ScrollableTasks>
+      {tasks.map((task, idx) => (
+        <TaskBox key={idx} {...task} />
+      ))}
+    </ScrollableTasks>
   </div>
 );
 

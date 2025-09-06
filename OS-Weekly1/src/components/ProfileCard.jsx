@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/ProfileCard.css';
+import Arrow from '../assets/svg/Arrow.svg';
 
 // The Header component for navigation and weekly activities title.
 const Header = () => (
@@ -10,7 +11,7 @@ const Header = () => (
     {/* The main title and status, aligned to the left */}
     <div className="title-container">
       <button className="left-arrow-btn">
-        <span className="left-arrow">← </span>
+        <img src={Arrow} />
       </button>
       <h1 className="main-title"> OS Weekly Activities</h1>
       <span className="status-text"> - RM Approved</span>

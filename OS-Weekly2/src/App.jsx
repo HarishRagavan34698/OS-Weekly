@@ -9,7 +9,6 @@ import EmployeeDetails from './components/EmployeeDetails.jsx';
 import clipboardIcon from './assets/svg/clipboard.svg';
 
 function App() {
-  const [count, setCount] = useState(0)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navItems = [

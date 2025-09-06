@@ -228,3 +228,21 @@
             text-overflow: ellipsis;
             margin: 0;
         }
+
+        .title-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 40px; /* creates space for the arrow */
+}
+
+.left-arrow-btn {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
